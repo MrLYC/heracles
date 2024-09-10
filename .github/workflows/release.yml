@@ -2,12 +2,10 @@ name: release
 
 on:
   push:
-    tags:
-      - "v*"
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     env:
       CGO_ENABLED: "1"
     steps:
@@ -18,13 +16,13 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version: 1.21.x
+          go-version: 1.22.5
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
           # either 'goreleaser' (default) or 'goreleaser-pro'
           distribution: goreleaser
           version: latest
-          args: release --rm-dist --timeout 2h
+          args: release --timeout 2h
         env:
           GITHUB_TOKEN: ${{ secrets.GORELEASE_TOKEN }}

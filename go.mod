@@ -1,6 +1,6 @@
 module github.com/mrlyc/heracles
 
-go 1.21
+go 1.22
 
 require (
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
@@ -14,6 +14,7 @@ require (
 	github.com/testcontainers/testcontainers-go v0.30.0
 	github.com/testcontainers/testcontainers-go/modules/compose v0.30.0
 	go.uber.org/dig v1.17.1
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -186,7 +187,6 @@ require (
 	google.golang.org/protobuf v1.33.0 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 	k8s.io/api v0.26.7 // indirect
 	k8s.io/apimachinery v0.26.7 // indirect
 	k8s.io/apiserver v0.26.7 // indirect
